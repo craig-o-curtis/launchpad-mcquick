@@ -1,4 +1,16 @@
-// Starter Kit / Development Environment / Boilerplate / Seed / Starter Project
+# Launchpad McQuick 
+This is a starter kit. 
+This is a development environment.
+This is a boilerplate.
+This is a seed.
+This is a starter project.
+These are all synymns.
+
+// package.json inspired by and tweaked from bit.ly/jsdevpackagejson
+$ npm install
+
+Duck Flavour Chosen:
+* VS Code NPM babel chai eslint express mocha webpack
 
 Considerations: 
 1. Browsers: IE, Firefox, Chrome, Safari, Opera
@@ -55,8 +67,13 @@ Options:
 
 Options: 
 1. Bower
-2. npm
-3. jspm
+  - irrelevant now
+2. ** npm ** CHOSEN
+  + One place for all packages
+  + choice of tne angularx team
+  ++ it is the defacto standard for package managers now
+3. JSPM
+  + does also bundle code ...
 4. Jam
 5. volo
 
