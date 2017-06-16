@@ -32,12 +32,20 @@ This Project
 
 ## IDE
 
+Questions: 
+1. Strong ES6 support?
+  - autocompletion?
+  - parse ES6 imports?
+  - report unused imports?
+  - automated refactoring?
+** Built-in terminal? 
+
 Options:
-1. Atom
-2. Webstorm
+1. Atom - plugin for built-in terminal
+2. Webstorm - not free
 3. Brackets
-4. ** VS Code **
-5. Sublime (under lime)
+4. ** VS Code ** CHOICE
+
 
 ### IDE configuration
 * .editorconfig file
@@ -152,14 +160,13 @@ Deploy to Options:
 * Surge
 
 
-
 ## Starter Kit Update Approaches
 1. Yeoman
 2. Github
 3. npm
 
-
-
+### CHANGE
+Add name of this app and change package.json with the flavours chosen for this Launchpad McQui ck
 
 
 
