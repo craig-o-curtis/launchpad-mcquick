@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "JavaScript development environment with babel, eslint, chai, mocha, localtunnel, webpack, etc",
   "scripts": {
-    "start": "",
+    "start": "nsp check",
     "test": "",
-    "build": ""
+    "build": "",
   },
   "author": "Craig O. Curtis",
   "license": "MIT",

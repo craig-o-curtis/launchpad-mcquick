@@ -12,6 +12,28 @@ $ npm install
 Duck Flavour Chosen:
 * VS Code NPM babel chai eslint express mocha webpack
 
+## Cool Goodies!
+
+Node Security Platform 
+https://nodesecurity.io/
+
+$ npm install nsp --global
+$ nsp check
+
+Gulp users:
+$ npm install gulp-nsp --save-dev
+
+Grunt users:
+$ npm install grunt-nsp --save-dev
+
+VS Code Users:
+$ ext install vscode-nsp
+
+### Use on npm start
+-- but need to be online
+
+
+## Starting a Project Notes:
 Considerations: 
 1. Browsers: IE, Firefox, Chrome, Safari, Opera
 2. Server: Node, Express, Java, PHP, etc
