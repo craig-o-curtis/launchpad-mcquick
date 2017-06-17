@@ -10,7 +10,7 @@ These are all synymns.
 $ npm install
 
 Duck Flavour Chosen:
-* VS Code NPM babel chai eslint express mocha webpack
+* VS Code, npm, Express
 
 ## Cool Goodies!
 
@@ -104,11 +104,41 @@ Options:
 
 Options:
 1. http-server
+ + simplest
+ - no live reloading
+ - only statc files
+
 2. live-server
-3. Express
+ + live reloading
+ - only static files
+
+3. ** Express ** Chosen
+ + better features
+ + can serve up Node api
+ + can use in prod too
+ >> Competitors: Koa, Hapi
+ - overkill if using Java, Ruby, Python
+
 4. budo
++ Integrates with Browserify
++ hot reloading - immediate changes in browser w/o save
+
 5. Webpack dev server
++ built-in if using Webpack
++ serves from memory - doesn't generate a physical file
++ hot reloading
+
 6. Browsersync
+++ Sets up dedicated IP for sharing work on LAN 
+++ All devices remain in sync +++ for browser and device testing
+++ Can use with Webpack, Browserify, Gulp, Express
+https://github.com/BrowserSync/recipes
+
+
+### Configuring Express
+$ mkdir buildScripts
+$ touch buildScripts/srcServer.js
+
 
 Sharing Progress Options:
 1. localtunnel
