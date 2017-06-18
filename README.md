@@ -330,9 +330,22 @@ And use babel-node in package.json scripts
 
 ## Linting
 1. JSLint
-2. JSHint
-3. ESLint
++ The original
 
+2. JSHint
++ More configurability
+
+3. ESLint ** CHOSEN **
++ most popular 
++ The defacto standard
+** eslin-watch plugin n
+** eslint-angular plugin for John Papa's Style Guide rule linting
+
+Can define scripts in package.json
+```json
+    // esw = eslint-watch command, watch src, don't watch buildScripts
+    "lint": "esw webpack.config.*  src  !buildScripts",
+```
 
 
 ## Unit Testing and Continuous Integration
