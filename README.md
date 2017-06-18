@@ -20,7 +20,7 @@ $ npm run myshare // see at https://launchpad.localtunnel.me
 Node Security Platform 
 https://nodesecurity.io/
 
-$ npm install nsp --global
+$ npm install -g babel-cli nsp
 $ nsp check
 
 Gulp users:
@@ -235,9 +235,36 @@ ex: prestart, start, poststart
 $ npm start -s // silent mode -- without all of noise in console 
 
 ## Transpiling
-1. Babel
+1. Babel ** CHOSEN **
++ Can even use experimental features now
+
+Node & Electron Presets:
+** babel-preset-es2015-node --- version detection
+** babel-preset-latest-minimal -- feature detection
+
+Use babel-node to run ES6 node
+
+
 2. Typescript
++ type safety
+- some plugins / packages may not work -- 1st gen React
+- requires type definitions
+
+
 3. Elm
++ it isn't javascript - clean syntax
++ immutable data structures
++ no runtime errors
+- learning curve
+- everything is functional
+
+
+### Babel Setup
+.babelrc file
+
+
+
+
 
 ## Bundling
 1. Browserify
