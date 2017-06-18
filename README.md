@@ -7,30 +7,35 @@ This is a starter project.
 These are all synymns.
 
 // package.json inspired by and tweaked from bit.ly/jsdevpackagejson
+```bash
 $ npm install
+```
 
 Duck Flavour Chosen:
-* VS Code, npm, Express, localtunnel
+* VS Code, npm, Express, localtunnel, Babel, Webpack
 
+```bash
 $ npm start
 $ npm run myshare // see at https://launchpad.localtunnel.me
+```
 
 ## Cool Goodies!
 
 Node Security Platform 
 https://nodesecurity.io/
 
+```bash
 $ npm install -g babel-cli nsp
 $ nsp check
+```
 
-Gulp users:
-$ npm install gulp-nsp --save-dev
+Also version for Gulp and Grunt
+*** But this setup uses npm only
 
-Grunt users:
-$ npm install grunt-nsp --save-dev
 
-VS Code Users:
-$ ext install vscode-nsp
+  VS Code Users:
+  $ ext install vscode-nsp
+
 
 ### Use on npm start
 -- but need to be online
@@ -139,7 +144,7 @@ https://github.com/BrowserSync/recipes
 $ npm install -g browser-sync
 
 ### Configuring Express
-```
+```js
 // buildScripts/srcServer.js
 var express = require('express');
 var path = require('path');
@@ -172,12 +177,16 @@ Sharing Progress Options:
 
 Global Setup
   // terminal
-  1. $ npm install localtunnel -g
-  2. $ node buildScripts/srcServer.js
-  
+  ```bash
+  npm install localtunnel -g
+  node buildScripts/srcServer.js
+  ```
+
   // terminal 2
-  3. $ lt --port 3000 // pass port of local server, returns random url 
-  OR 3. $ lt --port 3000 --subdomain projectname // has specified subdomain name
+  ```bash
+  $ lt --port 3000 // pass port of local server, returns random url 
+  $ lt --port 3000 --subdomain projectname // has specified subdomain name
+  ```
 
 Local Setup 
 
@@ -194,8 +203,10 @@ Local Setup
 3. Surge
 + very simple, no firewall hole punching
 - for static HTML CSS JS files
-  1. $ npm install -g surge
-  2. $ surge
+  ```bash
+  $ npm install -g surge
+  $ surge
+  ```
 
 
 4. now
@@ -203,9 +214,11 @@ https://zeit.co/now
 + No firewall punching, deploys to cloud
 + each time, unique URL
 + More permanent - don't need to keep machine on
-  1. $ npm install -g now
-  2. create start script
-  3. $ now
+  ```bash
+  $ npm install -g now
+  // create start script
+  $ now
+  ```
  
 
 ### Setup
@@ -261,21 +274,66 @@ Use babel-node to run ES6 node
 
 ### Babel Setup
 .babelrc file
-
-
-
+```json
+{
+  "presets": [
+    "latest"
+  ]
+}
+```
+And use babel-node in package.json scripts
 
 
 ## Bundling
+
+### Module Formats:
+// Things of the past:
+1. Globals
+2. IIFE's
+  ex: (function(){})();
+3. AMD - Async Module Definitions
+  ex: define(['jq'], function(jq) {})
+
+// Modern format
+1. CJS - CommonJS
+  ex: var jquery = require('jquery');
+2. UMD - Universal Module Definitions
+  ex: 
+3. ES6 modules ** CHOSEN **
+  ex: import jQuery form 'jquery';
+  + Will be standard is JS
+  + fails fast
+  + tree shaking in Webpack 2 and Rollup
+
+### Bundlers - package your code for the browser or node:
+0. Requirejs - fallen out of favor
 1. Browserify
-2. Webpack
++ the original
+- no HTML CSS images fonts out of the box
+
+2. Webpack ** CHOSEN **
++ handles more than just JS -- CSS, fonts, imagss
++ built-in hot loading web server
++ bundle splitting - for different sections of your app
++ tree shaking now!
+
 3. Rollup
++ first to offer tree-shaking
++ faster than webpack and browserify
+- still very new
+
 4. JSPM
++ uses system.js behind the scenes
++ can load at runtime
++ uses rollup
++ has its own package manager
 
 ## Linting
 1. JSLint
 2. JSHint
 3. ESLint
+
+
 
 ## Unit Testing and Continuous Integration
 

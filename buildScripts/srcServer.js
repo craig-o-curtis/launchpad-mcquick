@@ -6,14 +6,27 @@ import open from 'open';
 // var path = require('path');
 // var open = require('open');
 
+import webpack from 'webpack'; // webpack
+import webpackConfig from '../webpack.config.dev'; // webpack
+
 const port = 3000;
 const app = express();
 const rootFile = '../src/index.html';
+const compiler = webpack(webpackConfig);// webpack
+ // webpack
 
+// prep express for webpack
+app.use(require('webpack-dev-middleware')(compiler, {
+  noInfo: true,
+  publicPath: webpackConfig.output.publicPath
+}));
+
+// local server
 app.get('/', function(req, res){
   res.sendFile( path.join(__dirname, rootFile ) );
 });
 
+// listen on port 3000
 app.listen(port, function(err) {
 
   if (err) {
