@@ -10,7 +10,10 @@ These are all synymns.
 $ npm install
 
 Duck Flavour Chosen:
-* VS Code, npm, Express
+* VS Code, npm, Express, localtunnel
+
+$ npm start
+$ npm run myshare // see at https://launchpad.localtunnel.me
 
 ## Cool Goodies!
 
@@ -133,7 +136,7 @@ Options:
 ++ All devices remain in sync +++ for browser and device testing
 ++ Can use with Webpack, Browserify, Gulp, Express
 https://github.com/BrowserSync/recipes
-
+$ npm install -g browser-sync
 
 ### Configuring Express
 ```
@@ -161,15 +164,75 @@ app.listen(port, function(err) {
 
 
 Sharing Progress Options:
-1. localtunnel
+*** Share progress with customers for FREE!
+1. localtunnel  ** CHOSEN **
++ Easiest
++ Expose localhost to a public URL
+** punches a hole in your firewall
+
+Global Setup
+  // terminal
+  1. $ npm install localtunnel -g
+  2. $ node buildScripts/srcServer.js
+  
+  // terminal 2
+  3. $ lt --port 3000 // pass port of local server, returns random url 
+  OR 3. $ lt --port 3000 --subdomain projectname // has specified subdomain name
+
+Local Setup 
+
+
+
+
 2. ngrok
++ Also punches hole in firewall
+* Requires additional setup
+- Sign up, install, install authtoken, start app, ./ngrok http 80
++ password protected access
+
+
 3. Surge
++ very simple, no firewall hole punching
+- for static HTML CSS JS files
+  1. $ npm install -g surge
+  2. $ surge
+
+
 4. now
+https://zeit.co/now
++ No firewall punching, deploys to cloud
++ each time, unique URL
++ More permanent - don't need to keep machine on
+  1. $ npm install -g now
+  2. create start script
+  3. $ now
+ 
+
+### Setup
 
 ## Automation
 1. Grunt
++ config over vode
++ the original, more packags
+
 2. Gulp
-3. npm
++ code over config
++ faster than Grunt
++ more configuration options / customizable
+
+3. npm ** chosen
++ The chosen one today
++ cross-platform friendly
++ world's largest package manager
++ no depenedence on plugin authors, uses Node directly
+
+** npm scripts: pre, , post
+- pre... run before ... command
+- post... run before ... command
+ex: prestart, start, poststart
+
+
+$ npm start -s // silent mode -- without all of noise in console 
 
 ## Transpiling
 1. Babel
