@@ -8,7 +8,7 @@
     "poststart": "",
     "open:src": "babel-node buildScripts/srcServer.js",
     "security-check": "nsp check",
-    "lint": "esw webpack.config.*  src  !buildScripts",
+    "lint": "esw webpack.config.* src buildScripts --color",
     "localtunnel": "lt --port 3000",
     "mylocaltunnel": "lt --port 3000 --subdomain launchpad",
     "share": "npm-run-all --parallel open:src localtunnel",

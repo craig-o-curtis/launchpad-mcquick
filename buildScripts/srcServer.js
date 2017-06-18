@@ -13,9 +13,10 @@ const port = 3000;
 const app = express();
 const rootFile = '../src/index.html';
 const compiler = webpack(webpackConfig);// webpack
- // webpack
 
-// prep express for webpack
+/* eslint-disable no-console */
+
+// webpack // prep express for webpack
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: webpackConfig.output.publicPath
@@ -31,6 +32,7 @@ app.listen(port, function(err) {
 
   if (err) {
     console.error(err);
+    alert('asfsd');
   } else {
     open('http://localhost:' + port);
   }

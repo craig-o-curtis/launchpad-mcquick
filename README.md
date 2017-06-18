@@ -338,7 +338,18 @@ And use babel-node in package.json scripts
 3. ESLint ** CHOSEN **
 + most popular 
 + The defacto standard
-** eslin-watch plugin n
+** eslint-watch plugin
+
+Disabling rules
+1. Entire File
+```js
+/* eslint-disable no-console */
+```
+2. By line
+```js
+console.log(chalk.green('Starting app in dev mode...')); // eslint-disable-line no-console   
+```
+
 ** eslint-angular plugin for John Papa's Style Guide rule linting
 
 Can define scripts in package.json
