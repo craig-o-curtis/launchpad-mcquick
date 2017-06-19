@@ -438,6 +438,10 @@ Continuous Integration - notify when builds broken
 6. SnapCI
 
 ** This Course -- Travis and Appveyor ** 
+.travis.yml // for Linux envt testing
+appveyor.yml // for Windows testing
+
+
 
 ## HTTP Call Approaches
 
