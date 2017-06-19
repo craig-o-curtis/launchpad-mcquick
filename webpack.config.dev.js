@@ -1,5 +1,5 @@
 import path from 'path';
-import webpackbrowsersync from 'browser-sync-webpack-plugin';
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
 
 export default {
   debug: true,
@@ -19,7 +19,7 @@ export default {
     // can add hot reloading, catching errors, linting styles
     // BUG - css not injected in browser-syc
     // BUG - 2 local dev servers running - 3000 and 9000
-    new webpackbrowsersync({
+    new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
       files: [
@@ -27,8 +27,9 @@ export default {
         './**/*.html',
         './**/*.css'
       ],
-      server: { baseDir: ['src'] }
-    })
+      server: { baseDir: ['src'] },
+      // proxy: 'http://localhost:3100/'
+    },{reload:false})
   ],
   module: {
     loaders: [

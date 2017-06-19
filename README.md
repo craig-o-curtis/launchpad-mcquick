@@ -416,14 +416,28 @@ Testing
 5. AVA + runs in parallel, only reruns impacted tests
 6. Jest + from Facebook, popular for React devs; just a wrapper over Jasmine
 
-Continuous Integration
-1. Travis
-2. Appveyor
-3. Jenkins
+Continuous Integration - notify when builds broken
+** Why CI?
+* forgot to commit a new file
+* forgot to update package.json
+* commit doesn't run cross-platform
+* Node version conflicts
+* bad merge
+* didn't run tests
+** Catches mistakes quickly
+* run automated builds on commit
+* run code coverage - can reject if below a certain percentage
+ 
+
+1. Travis - Linux-based CI server
+2. Appveyor - Windows-based CI server
+3. Jenkins - very popular
++ Better choice if want to host CI server on own
 4. CircleCI
 5. Semaphore
 6. SnapCI
 
+** This Course -- Travis and Appveyor ** 
 
 ## HTTP Call Approaches
 

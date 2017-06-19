@@ -4,7 +4,7 @@
   "description": "JavaScript development environment with babel, eslint, chai, mocha, localtunnel, webpack, etc",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel security-check open:src lint:watch",
+    "start": "npm-run-all --parallel security-check open:src lint:watch test:watch mylocaltunnel",
     "poststart": "",
     "open:src": "babel-node buildScripts/srcServer.js",
     "security-check": "nsp check",
@@ -15,6 +15,7 @@
     "share": "npm-run-all --parallel open:src localtunnel",
     "myshare": "npm-run-all --parallel open:src mylocaltunnel",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch ",
     "build": ""
   },
   "author": "Craig O. Curtis",
