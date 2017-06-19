@@ -16,6 +16,7 @@ Duck Flavour Chosen:
 
 ```bash
 $ npm start
+$ npm start -s
 $ npm run myshare // see at https://launchpad.localtunnel.me
 ```
 
@@ -349,6 +350,15 @@ Disabling rules
 ```js
 console.log(chalk.green('Starting app in dev mode...')); // eslint-disable-line no-console   
 ```
+
+>>> A note on npm scripts
+* The -- passes the next argument to that script
+** npm run lint -- --watch passes the --watch to the lint command
+```json
+    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint-watch": "npm run lint -- --watch",
+```
+
 
 ** eslint-angular plugin for John Papa's Style Guide rule linting
 

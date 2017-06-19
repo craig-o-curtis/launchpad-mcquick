@@ -9,7 +9,7 @@ import open from 'open';
 import webpack from 'webpack'; // webpack
 import webpackConfig from '../webpack.config.dev'; // webpack
 
-const port = 3000;
+const port = 9000;
 const app = express();
 const rootFile = '../src/index.html';
 const compiler = webpack(webpackConfig);// webpack
@@ -32,7 +32,6 @@ app.listen(port, function(err) {
 
   if (err) {
     console.error(err);
-    alert('asfsd');
   } else {
     open('http://localhost:' + port);
   }
