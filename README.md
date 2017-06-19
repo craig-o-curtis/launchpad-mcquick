@@ -444,7 +444,7 @@ appveyor.yml // for Windows testing
 https://travis-ci.org/
 https://ci.appveyor.com/
 
-
+*** NOTE - if you install/uninstall npm packages, git may not recognize any changes, so just add a comment like this then commit and check that Travis and Appveyor are consuming and doing automated builds from your commits.
 
 ## HTTP Call Approaches
 
