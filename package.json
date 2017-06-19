@@ -14,6 +14,7 @@
     "mylocaltunnel": "lt --port 3000 --subdomain launchpad",
     "share": "npm-run-all --parallel open:src localtunnel",
     "myshare": "npm-run-all --parallel open:src mylocaltunnel",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.spec.js\"",
     "build": ""
   },
   "author": "Craig O. Curtis",
@@ -56,6 +57,7 @@
     "style-loader": "0.13.1",
     "webpack": "1.13.2",
     "webpack-dev-middleware": "1.8.4",
+    "webpack-dev-server": "^2.4.5",
     "webpack-hot-middleware": "2.13.0",
     "webpack-md5-hash": "0.0.5"
   }

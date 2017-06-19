@@ -12,7 +12,9 @@ $ npm install
 ```
 
 Duck Flavour Chosen:
-* VS Code, npm, Express, localtunnel, Babel, Webpack
+* VS Code, npm, Express, localtunnel, Babel, Webpack, Mocha + Chai 
+
+*** NEED TO HOOKUP BROWSER-SYNC ***
 
 ```bash
 $ npm start
@@ -369,23 +371,50 @@ Can define scripts in package.json
 ```
 
 
-## Unit Testing and Continuous Integration
+## Testing and Continuous Integration
+
+### Testing Types
+1. Unit -- QUnit, Mocha, Jasmine
+2. Integration
+3. UI -- Selenium
+
 
 ### Decisions
 1. Framework
-2. Assertion Library
-3. Helper Libraries
+2. Assertion Library - Chai for Mocha
+3. Helper Libraries 
+  * JSDOM - a browserless DOM for Node
+  * Cheerio -- like jQuery for the server
+
 4. Where to run tests
+  * In the browser
+    * Karma
+    * Testem
+  * Headless browser - a browser without a visible user interface
+    * PhantomJS
+  * In-memory DOM -- lighter-weight than PhantomJS
+    * JSDOM
+
 5. Where to place tests
+  * In spec folder
+  * Alongside code ** CHOSEN **
+  
+  * .spec.js more popular than using .test.js
+
 6. When to run tests
+  * Every time you hit save
+  * TDD
 
 Testing 
-1. Mocha
-2. Jasmine
-3. Tape
-4. QUnit
-5. AVA
-6. Jest
+1. Mocha + top choice, more configurable ** CHOSEN **
+- doesn't come with an assertion library
+** Chai - is most popular assertion library
+
+2. Jasmine + has assertion library built-in 
+3. Tape + leanest
+4. QUnit + oldest
+5. AVA + runs in parallel, only reruns impacted tests
+6. Jest + from Facebook, popular for React devs; just a wrapper over Jasmine
 
 Continuous Integration
 1. Travis
