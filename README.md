@@ -441,6 +441,9 @@ Continuous Integration - notify when builds broken
 .travis.yml // for Linux envt testing
 appveyor.yml // for Windows testing
 
+https://travis-ci.org/
+https://ci.appveyor.com/
+
 
 
 ## HTTP Call Approaches
