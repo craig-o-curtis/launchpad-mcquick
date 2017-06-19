@@ -15,7 +15,7 @@
     "share": "npm-run-all --parallel open:src localtunnel",
     "myshare": "npm-run-all --parallel open:src mylocaltunnel",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.spec.js\"",
-    "test:watch": "npm run test -- --watch ",
+    "test:watch": "npm run test -- --watch",
     "build": ""
   },
   "author": "Craig O. Curtis",
